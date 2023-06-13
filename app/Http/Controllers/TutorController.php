@@ -10,9 +10,12 @@ use App\Models\Tutor;
 
 class TutorController extends Controller
 {
-  public function index(){
-    
-    $tutor = Tutor::get();
+  public function index(Request $request){
+    $keyword = $request->keyword;
+    $tutor = Tutor::where('name','LIKE','%'.$keyword.'%')
+              ->OrWhere('skill', $keyword)
+              ->OrWhere('rate', $keyword)
+              ->get();
     return view('tutor', ['tutorList' => $tutor]);
   }
 

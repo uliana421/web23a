@@ -8,7 +8,7 @@
   
     
         <table class="table table-bordered">
-            <tr><td>Nama : {{ $tutor->name}}</td></tr>
+            <tr><td>Name : {{ $tutor->name}}</td></tr>
             <tr><td>Gender : {{ $tutor->gender}}</td></tr>
             <tr><td>Age : {{ $tutor->age }}</td></tr>
             <tr><td>Email : {{ $tutor->email }}</td></tr>

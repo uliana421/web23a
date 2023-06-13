@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 use App\Models\Tutor;
-use App\Models\TypeClass;
+
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-       Tutor::factory(5)->create();
+       Tutor::factory(30)->create();
       
     }
 }

@@ -13,6 +13,15 @@
             </p>
         @endif
 
+       
+            <div class=" my-3 col-8 col-sm-8 col-md-5"> 
+              <form action=""  method="get" class="d-flex" role="search">
+                <input class="form-control me-2" type="text" name="keyword" placeholder="keyword" aria-label="Search">
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+              </form>
+            </div>
+          
+
     <table class="table table-bordered" >
         <thead>
         <tr>
@@ -45,5 +54,5 @@
     @endforeach 
     </table>
 
-    
+
 @endsection

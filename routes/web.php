@@ -22,11 +22,13 @@ Route::get('/', function () {
 
 
 Route::get('/tutors', [TutorController::class, 'index']);
-Route::get('/class', [TypeClassController::class, 'index']);
 Route::get('/tutor/{id}', [TutorController::class, 'show']);
 Route::get('/tutor-add', [TutorController::class, 'create']);
 Route::post('/tutors', [TutorController::class, 'store']);
 Route::get('/tutor-edit/{id}', [TutorController::class, 'edit']);
 Route::put('/tutor/{id}', [TutorController::class, 'update']);
+
+Route::get('/tutor-delete/{id}',[TutorController::class, 'delete']);
+Route::delete('/tutor-destroy/{id}',[TutorController::class, 'destroy']);
 
 

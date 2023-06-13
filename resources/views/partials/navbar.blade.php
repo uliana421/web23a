@@ -22,9 +22,7 @@
             <a class="nav-link " href="/tutors">Tutor</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link " href="/class">Kelas</a>
-          </li>
+         
           
          
         </ul>

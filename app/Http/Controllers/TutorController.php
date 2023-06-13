@@ -11,14 +11,13 @@ use App\Models\Tutor;
 class TutorController extends Controller
 {
   public function index(){
-    // $tutor = Tutor::all();
+    
     $tutor = Tutor::get();
     return view('tutor', ['tutorList' => $tutor]);
   }
 
   public function show($id){
-    $tutor = Tutor::with(['class'])
-        ->findOrFail($id);
+    $tutor = Tutor::findOrFail($id);
     return view('tutor-detail', ['tutor' => $tutor]);
   }
   public function create(){
@@ -26,18 +25,7 @@ class TutorController extends Controller
   }
 
   public function store(Request $request){
-    // $tutor = new Tutor;
-    // $tutor->name = $request->name;
-    // $tutor->gender = $request->gender;
-    // $tutor->age = $request->age;
-    // $tutor->email = $request->email;
-    // $tutor->address = $request->address;
-    // $tutor->skill = $request->skill;
-    // $tutor->rate = $request->rate;
-    // $tutor->salary = $request->salary;
-    // $tutor->save();
-
-    // $tutor->create($request->all()); 
+    
     $tutor = Tutor::create($request->all());
 
      if($tutor) {
@@ -59,6 +47,29 @@ class TutorController extends Controller
     
       $tutor = Tutor::findOrFail($id);
       $tutor->update($request->all());
+
+      if($tutor) {
+        Session::flash('status', 'success' );
+        Session::flash('message', 'Edit Data Success!' );
+     }
+
       return redirect('/tutors');
+  }
+
+  public function delete($id){
+    $tutor = Tutor::findOrFail($id);
+    return view('tutor-delete', ['tutor' => $tutor]);
+  }
+
+  public function destroy($id){
+    $deleteTutor = Tutor::findOrFail($id);
+    $deleteTutor->delete();
+    
+    if($deleteTutor) {
+      Session::flash('status', 'success' );
+      Session::flash('message', 'Delete Data Success!' );
+   }
+
+    return redirect('/tutors');
   }
 }

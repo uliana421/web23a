@@ -17,9 +17,6 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
        Tutor::factory(5)->create();
-       TypeClass::factory(5)->create();
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+      
     }
 }

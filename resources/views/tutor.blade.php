@@ -28,14 +28,17 @@
      @foreach($tutorList as $tutor) 
     
         <tr>
-            <td>{{ $tutor->id }}</td>
+            <td>{{ $loop->iteration }}</td>
             <td>{{ $tutor->name }}</td>
             <td>{{ $tutor->skill }}</td>
             <td>{{ $tutor->rate }}</td>
             <td>{{ $tutor->salary}}</td>
             <td>
                 <a href="tutor/{{ $tutor->id }}" class="text-decoration-none">Detail</a> ||
-                <a href="tutor-edit/{{ $tutor->id }}" class="text-decoration-none">Edit</a>
+                <a href="tutor-edit/{{ $tutor->id }}" class="text-decoration-none">Edit</a> ||
+                <a href="tutor-delete/{{ $tutor->id }}" class="text-decoration-none">Delete</a>
+
+               
             </td>
         </tr>
    

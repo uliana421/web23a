@@ -2,8 +2,8 @@
 @section('title', 'about')
 @section('container')
 
-<div class="mt-5 col-7 m-auto">
-    <form action="/tutors" method="post">
+<div class="mt-5 col-7">
+    <form action="/tutors" method="post" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="name">Name</label>
@@ -51,6 +51,13 @@
         <div class="mb-3">
             <label for="salary">Salary</label>
             <input type="text" class="form-control" id="salary" name="salary">
+        </div>
+
+        <div class="mb-4">
+            <label for="photo">Photo</label>
+            <div class="input-group">
+                <input type="file" class="form-control" id="photo" name="photo">
+                </div>
         </div>
 
         <div class="mb-3">

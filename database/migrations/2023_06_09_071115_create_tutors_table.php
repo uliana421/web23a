@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('skill');
             $table->integer('rate');
             $table->string('salary');
+            $table->string('image',255)->nullable();
             $table->timestamps();
         });
     }

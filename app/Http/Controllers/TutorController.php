@@ -28,7 +28,15 @@ class TutorController extends Controller
   }
 
   public function store(Request $request){
-    
+
+    $newName = '';
+
+    if($request->file('photo')){
+    $extension = $request->file('photo')->getClientOriginalExtension();
+    $newName = $request->name.'-'.now()->timestamp.'.'.$extension;
+    $request->file('photo')->storeAs('photo', $newName);
+    }
+   $request['image'] = $newName;
     $tutor = Tutor::create($request->all());
 
      if($tutor) {

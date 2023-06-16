@@ -3,10 +3,15 @@
 @section('container')
 
 
-    {{-- {{ $tutor->class->type}} --}}
     <h2>Detail Tutor {{ $tutor->name}}</h2> 
   
-    
+    <div class="my-3">
+        @if($tutor->image != '')
+        <img src="{{ asset('storage/photo/'.$tutor->image) }}" alt="" class="img-thumbnail rounded-circle" width="150px">
+        @else
+        <img src="{{ asset('storage/photo/default.jpg') }}" alt=""  width="150px">
+        @endif
+    </div>
         <table class="table table-bordered">
             <tr><td>Name : {{ $tutor->name}}</td></tr>
             <tr><td>Gender : {{ $tutor->gender}}</td></tr>

@@ -2,8 +2,8 @@
 @section('title', 'about')
 @section('container')
  
-    
     <div class="my-2">
+        <a href="/home" class="btn btn-primary"><-</a>
         <a href="/tutor-add" class="btn btn-primary">Add Data</a>
     </div>
 

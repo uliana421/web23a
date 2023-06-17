@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 use App\Models\Tutor;
+use App\Models\User;
 
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -17,6 +18,7 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
        Tutor::factory(4)->create();
+       User::factory(2)->create();
       
     }
 }

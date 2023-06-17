@@ -16,15 +16,15 @@ class TutorController extends Controller
               ->OrWhere('skill', $keyword)
               ->OrWhere('rate', $keyword)
               ->get();
-    return view('tutor', ['tutorList' => $tutor]);
+    return view('tutor.tutor', ['tutorList' => $tutor]);
   }
 
   public function show($id){
     $tutor = Tutor::findOrFail($id);
-    return view('tutor-detail', ['tutor' => $tutor]);
+    return view('tutor.tutor-detail', ['tutor' => $tutor]);
   }
   public function create(){
-    return view('tutor-add');
+    return view('tutor.tutor-add');
   }
 
   public function store(Request $request){
@@ -50,7 +50,7 @@ class TutorController extends Controller
 
   public function edit(Request $request, $id){
     $tutor = Tutor::findOrFail($id);
-    return view('tutor-edit', ['tutor' => $tutor]);
+    return view('tutor.tutor-edit', ['tutor' => $tutor]);
     
   }
 
@@ -69,7 +69,7 @@ class TutorController extends Controller
 
   public function delete($id){
     $tutor = Tutor::findOrFail($id);
-    return view('tutor-delete', ['tutor' => $tutor]);
+    return view('tutor.tutor-delete', ['tutor' => $tutor]);
   }
 
   public function destroy($id){

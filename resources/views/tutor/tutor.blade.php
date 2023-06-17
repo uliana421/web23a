@@ -3,8 +3,8 @@
 @section('container')
  
     <div class="my-2">
-        <a href="/home" class="btn btn-primary"><-</a>
-        <a href="/tutor-add" class="btn btn-primary">Add Data</a>
+        <a href="/home" class="btn btn-dark "><-</a>
+        <a href="/tutor-add" class="btn btn-dark">Add Data</a>
     </div>
 
         @if(Session::has('status'))
@@ -17,12 +17,12 @@
             <div class=" my-3 col-8 col-sm-8 col-md-5"> 
               <form action=""  method="get" class="d-flex" role="search">
                 <input class="form-control me-2" type="text" name="keyword" placeholder="keyword" aria-label="Search">
-                <button class="btn btn-outline-primary" type="submit">Search</button>
+                <button class="btn btn-outline-dark" type="submit">Search</button>
               </form>
             </div>
           
 
-    <table class="table table-bordered" >
+    <table class="table table-bordered text-center" >
         <thead>
         <tr>
             <th>No.</th>
@@ -43,9 +43,9 @@
             <td>{{ $tutor->rate }}</td>
             <td>{{ $tutor->salary}}</td>
             <td>
-                <a href="tutor/{{ $tutor->id }}" class="text-decoration-none">Detail</a> ||
-                <a href="tutor-edit/{{ $tutor->id }}" class="text-decoration-none">Edit</a> ||
-                <a href="tutor-delete/{{ $tutor->id }}" class="text-decoration-none">Delete</a>
+                <a href="tutor/{{ $tutor->id }}" class="btn btn-dark">Detail</a>
+                <a href="tutor-edit/{{ $tutor->id }}" class="btn btn-dark">Edit</a>
+                <a href="tutor-delete/{{ $tutor->id }}" class="btn btn-danger">Delete</a>
 
                
             </td>

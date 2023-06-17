@@ -16,7 +16,7 @@
         box-sizing: border-box;
     }
     body {
-        background-color: skyblue;
+        background-color: rgb(145, 136, 136);
     }
 </style>
 <body>
@@ -42,7 +42,7 @@
                 <label for="fpassword" class="form-label">Password</label>
                 <input type="password" id="fpassword" name="password" class="form-control" required>
             </div>       
-                    <button class="btn btn-primary form-control" type="submit">Login</button>
+                    <button class="btn btn-dark form-control" type="submit">Login</button>
                 </form>
             </div>
         </div>

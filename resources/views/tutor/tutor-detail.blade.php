@@ -2,8 +2,12 @@
 @section('title', 'about')
 @section('container')
 
+    <a href="/tutors" class="btn btn-dark"><-</a>
+    <h2>Detail Tutor {{ $tutor->name}}</h2>
 
-    <h2>Detail Tutor {{ $tutor->name}}</h2> 
+   
+    
+    
   
     <div class="my-3">
         @if($tutor->image != '')

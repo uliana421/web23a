@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'about')
+@section('title', 'tutors | delete')
 @section('container')
 
 <div class="mt-3">

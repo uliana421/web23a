@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'about')
+@section('title', 'tutors | detail')
 @section('container')
 
     <a href="/tutors" class="btn btn-dark"><-</a>

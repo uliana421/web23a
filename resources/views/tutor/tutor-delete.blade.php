@@ -11,7 +11,7 @@
         <button type="submit" class="btn btn-danger">Delete</button> 
    </form>
 
-   <a href="/tutors" class="btn btn-primary">Cancel</a>
+   <a href="/tutors" class="btn btn-dark">Cancel</a>
 </div>
 
 @endsection

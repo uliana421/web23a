@@ -2,8 +2,8 @@
 @section('title', 'tutors | detail')
 @section('container')
 
-    <a href="/tutors" class="btn btn-dark"><-</a>
-    <h2>Detail Tutor {{ $tutor->name}}</h2>
+    <a href="/tutors" class="btn btn-dark"><- Back To Tutors</a>
+   
 
    
     
@@ -13,9 +13,10 @@
         @if($tutor->image != '')
         <img src="{{ asset('storage/photo/'.$tutor->image) }}" alt="" class="img-thumbnail rounded-circle" width="150px">
         @else
-        <img src="{{ asset('storage/photo/default.jpg') }}" alt=""  width="150px">
+        <img src="{{ asset('storage/photo/default_pp.jpg') }}" alt="" class="img-thumbnail rounded-circle" width="150px">
         @endif
     </div>
+    <div class="float-right-top">
         <table class="table table-bordered">
             <tr><td>Name : {{ $tutor->name}}</td></tr>
             <tr><td>Gender : {{ $tutor->gender}}</td></tr>
@@ -28,8 +29,8 @@
             
              
        
-    </table>
-
+        </table>
+    </div>
    
    
    

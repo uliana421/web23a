@@ -15,8 +15,11 @@
         padding: 20px;
         box-sizing: border-box;
     }
+    .link {
+        text-decoration: none;
+    }
     body {
-        background-color: rgb(145, 136, 136);
+        background-color: darkgray;
     }
 </style>
 <body>
@@ -43,8 +46,10 @@
                 <input type="password" id="fpassword" name="password" class="form-control" required>
             </div>       
                     <button class="btn btn-dark form-control" type="submit">Login</button>
-                </form>
+                </form> <br>
+                <a href="/register" class="link">Create an Account!</a>
             </div>
+           
         </div>
     </div>
 

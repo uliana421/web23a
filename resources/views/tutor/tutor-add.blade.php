@@ -2,7 +2,9 @@
 @section('title', 'tutors | add_tutor')
 @section('container')
 
-<div class="mt-5 col-7">
+<a href="/home" class="btn btn-dark"><-</a>
+<CENTER><h3>Add New Tutor</h3></CENTER>
+<div class="mt-3 col-7">
     <form action="/tutors" method="post" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
@@ -61,7 +63,8 @@
         </div>
 
         <div class="mb-3">
-            <button class="btn btn-success" type="submit">Save</button>
+            <button class="btn btn-dark" type="submit">Save</button>
+            
         </div>
 
         

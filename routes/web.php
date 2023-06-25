@@ -22,6 +22,10 @@ Route::get('/home', function () {
 
 Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'authenticating'])->middleware('guest');
+
+Route::get('/register', [AuthController::class, 'register'])->name('register')->middleware('guest');
+Route::post('/register', [AuthController::class, 'registerPost'])->name('register')->middleware('guest');
+    
 Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
 Route::get('/tutors', [TutorController::class, 'index'])->middleware('auth');
